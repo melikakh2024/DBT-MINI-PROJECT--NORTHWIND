@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Continents">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="Continent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ContinentName" type="xs:string" />
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="Country">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="CountryName" type="xs:string" />
+                    <xs:element minOccurs="0" name="CountryCode" type="xs:string" />
+                    <xs:element minOccurs="0" name="CountryCapital" type="xs:string" />
+                    <xs:element minOccurs="0" name="Population" type="xs:unsignedInt" />
+                    <xs:element minOccurs="0" name="Subdivision" type="xs:string" />
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="State">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="StateName" type="xs:string" />
+                          <xs:element minOccurs="0" name="EnglishStateName" type="xs:string" />
+                          <xs:element minOccurs="0" name="StateCode" type="xs:string" />
+                          <xs:element minOccurs="0" name="StateCapital" type="xs:string" />
+                          <xs:element minOccurs="0" name="RegionName" type="xs:string" />
+                          <xs:element minOccurs="0" name="EnglishRegionName" type="xs:string" />
+                          <xs:element minOccurs="0" name="RegionCode" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="type" type="xs:string" use="optional" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

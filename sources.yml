@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: auxiliary
+    database: postgres
+    schema: northwind_dwh_auxiliary
+    tables:
+      - name: territories_xml
+        quoting:
+          database: false
+          schema: false
+          identifier: true
+      - name: dt_state
+        quoting:
+          database: false
+          schema: false
+          identifier: true

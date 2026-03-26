@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: orderdetails_incremental
+    description: "The  orderdetails_incremental fact joining of  orderdetails and products tables "
+    columns:
+      - name: OrderLine
+        description: "The primary key for this table composite of productID and OrderId"
+        tests:
+          - unique
+          - not_null
+    
